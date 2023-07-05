@@ -3,9 +3,7 @@ import { Message } from 'element-ui'
 const ACCESS_TOKEN = 'Authorization'
 
 const request = axios.create({
-  // baseURL: "http://127.0.0.1:8080/",
-  baseURL: "http://wpan.nat300.top/",
-  // baseURL: "https://api.zhwtgpt.com/",
+  baseURL: "http://127.0.0.1:8080/",
   timeout: 30 * 1000, // 请求超时时间
 })
 

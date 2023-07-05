@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>大语言模型应用平台</title>
+  </head>
+  <body scroll="no">
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script type="text/javascript">
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        const clientWidth = document.documentElement.clientWidth
+        const fontSize = Math.round((clientWidth / 375) * 100)
+        document.documentElement.style.fontSize = fontSize + 'px'
+      }
+    </script>  
+  </body>
+  
+  <!-- <script src="<%= BASE_URL %>libs/echarts@5.2.0/echarts.min.js"></script> -->
+</html>
+<style lang="scss" scoped>
+  body {
+    margin: 0px !important;
+    height: 100vh; 
+    width: 100vw;
+    overflow: hidden !important;
+  }
+</style>

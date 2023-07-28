@@ -23,6 +23,7 @@ aizw ChatGPT API Key，
 #### docker部署
 #### 部署MySQL数据库
 docker pull mysql:5.7
+
 docker run -d -p 3306:3306 --privileged=true -v /docker/mysql/conf/my.cnf:/etc/my.cnf -v /docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql mysql:5.7
 
 #### 部署java后端项目

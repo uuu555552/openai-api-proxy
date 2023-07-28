@@ -26,6 +26,9 @@ docker pull mysql:5.7
 
 docker run -d -p 3306:3306 --privileged=true -v /docker/mysql/conf/my.cnf:/etc/my.cnf -v /docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql mysql:5.7
 
+执行openai.sql文件的SQL语句
+
+
 #### 部署java后端项目
 docker run -d -p 8080:8080  --name aizw-back wangsiwei496/aizw-back:latest
 

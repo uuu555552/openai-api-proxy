@@ -20,12 +20,11 @@ aizw ChatGPT API Key，
 
 
 ### 后端部署流程
-## docker部署
-# 部署MySQL数据库
+#### docker部署
 
-# 部署java后端项目
+#### 部署MySQL数据库
 
-
+#### 部署java后端项目
 
 
 

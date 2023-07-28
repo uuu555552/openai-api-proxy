@@ -18,6 +18,18 @@ aizw ChatGPT API Key，
 
 ![image-20230705162907091](C:\Users\49607\AppData\Roaming\Typora\typora-user-images\image-20230705162907091.png)
 
+
+### 后端部署流程
+## docker部署
+# 部署MySQL数据库
+
+# 部署java后端项目
+
+
+
+
+
+
 ## 隐私声明
 
 该项目高度重视隐私，致力于保护其用户的隐私。该项目不会以任何方式收集、记录或存储用户输入的任何文本或由 OpenAI 服务器返回的任何文本。该项目不会向 OpenAI 或任何第三方提供有关 API 调用者的身份的任何信息，包括但不限于 IP 地址和用户代理字符串。

@@ -4,21 +4,12 @@ aizw ChatGPT API Key，
 
 #### 支持 **GPT-4** / GPT-3.5-Turbo / GPT-3.5-Turbo-16K / embeddings / DALL·E / whisper / text-davinci
 
-国内动态加速 直连无需代理
+国内动态加速 直连无需代理 ### [QQ群: 640541448]
 
 [项目演示](https://aizw.io/) / 
-
-### [QQ群: 640541448]
-
 ### 使用教程
 
 登陆后添加gpt4官方APIkey，点击生成私钥即可进行分发授权。
-
-![image-20230705162725054](C:\Users\49607\AppData\Roaming\Typora\typora-user-images\image-20230705162725054.png)
-
-![image-20230705162907091](C:\Users\49607\AppData\Roaming\Typora\typora-user-images\image-20230705162907091.png)
-
-
 ### 后端部署流程
 #### docker部署
 #### 部署MySQL数据库
@@ -31,6 +22,10 @@ docker run -d -p 3306:3306 --privileged=true -v /docker/mysql/conf/my.cnf:/etc/m
 
 #### 部署java后端项目
 docker run -d -p 8080:8080  --name aizw-back wangsiwei496/aizw-back:latest
+
+
+
+
 
 
 

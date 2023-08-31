@@ -21,8 +21,11 @@ docker run -d -p 3306:3306 --privileged=true -v /docker/mysql/conf/my.cnf:/etc/m
 
 
 #### 部署java后端项目
-docker run -d -p 8080:8080  --name aizw-back wangsiwei496/aizw-back:latest
+默认8080端口
+nohup java -jar openai-api-1.0.1.jar   >> log-openai-api.log 2>&1 &
 
+指定端口
+nohup java -jar openai-api-1.0.1.jar  --server.port=8081  >> log-openai-api.log 2>&1 &
 
 
 

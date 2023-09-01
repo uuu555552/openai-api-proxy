@@ -13,20 +13,30 @@ aizw ChatGPT API Key，
 ### 后端部署流程
 #### docker部署
 #### 部署MySQL数据库
+
+##### 拉取mysql-5.7镜像
 docker pull mysql:5.7
 
-docker run -d -p 3306:3306 --privileged=true -v /docker/mysql/conf/my.cnf:/etc/my.cnf -v /docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 --name mysql mysql:5.7
+#### 创建需要挂载的目录（自定义，这里只是举例，不一定要按照例子来）
 
-执行openai.sql文件的SQL语句
+mkdir -p /docker/mysql/conf
+mkdir -p /docker/mysql/data
+mkdir -p /docker/mysql/log
+
+#### 启动MySQL容器
+docker run -d -p 3306:3306 --privileged=true -v /docker/mysql/conf/my.cnf:/etc/mysql/mysql.conf.d -v /docker/mysql/data:/var/lib/mysql -v /docker/mysql/log:/var/log/ -e MYSQL_ROOT_PASSWORD=123456 --name ai_mysql mysql:5.7
+
+登录MySQL执行 openai.sql 文件的SQL语句
 
 
 #### 部署java后端项目
-默认8080端口
-nohup java -jar openai-api-1.0.1.jar   >> log-openai-api.log 2>&1 &
 
-指定端口
-nohup java -jar openai-api-1.0.1.jar  --server.port=8081  >> log-openai-api.log 2>&1 &
+#### 拉取服务镜像
+docker pull wangsiwei496/aizw-back
 
+
+#### 启动服务容器
+docker run -d -p 8080:8080  --name aizw-back --link ai_mysql:ai_mysql wangsiwei496/aizw-back:latest
 
 
 
